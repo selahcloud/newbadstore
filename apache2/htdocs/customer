@@ -1,0 +1,113 @@
+<html>
+<head>
+<style type="text/css">
+input{
+margin-left: 60px;
+}
+</style>
+<title>Customer Survey</title>
+</head>
+
+
+<body>
+
+<font color=#E0F8F7 size=6> Customer Survey </font>
+
+<font color=#E0F8F7 size=3> 
+
+<table width="480" border="0" align="center" cellspacing="0" cellpadding="0">
+  <tr>
+    <td height="627" colspan="2">
+      <P>
+      <P>
+      <FORM action=index.php method=post>
+        <H3 align=left><FONT face=arial,helvetica> Your information will be kept completely confidential </FONT><P></H3>
+        Name: 
+        <INPUT type="text" name="name" size="20" maxlength="40">
+         
+        <P>Email :  
+          <INPUT type="text" name="email" size="20" maxlength="40">
+
+<P>
+<P>
+<P>
+<P>
+<?php echo "1) Which products do you shop online?"; ?>
+<P>
+<INPUT TYPE = 'Checkbox' Name ='prod'  value= 'Elec' ><?php echo "Electronics"; ?>
+<P>
+<INPUT TYPE = 'Checkbox' Name ='prod'  value= 'Furn' ><?php echo "Furniture"; ?>
+<P>
+<INPUT TYPE = 'Checkbox' Name ='prod'  value= 'Jewe' ><?php echo "Jewellery"; ?>
+
+<P>
+
+<P>
+<?php echo "2) Which Credit card do you primarily use for online transactions?"; ?>
+<P>
+<INPUT TYPE = 'Radio' Name ='card'  value= 'Visa' ><?php echo "Visa"; ?>
+<P>
+<INPUT TYPE = 'Radio' Name ='card'  value= 'Mastercard' ><?php echo "Mastercard"; ?>
+<P>
+<INPUT TYPE = 'Radio' Name ='card'  value= 'Amexp' ><?php echo "American Express"; ?>
+
+<P>
+
+<P>
+<?php echo "3) How did you learn about our online store?"; ?>
+<P>
+<INPUT TYPE = 'Checkbox' Name ='know'  value= 'A' ><?php echo "Friend/Relative"; ?>
+<P>
+<INPUT TYPE = 'Checkbox' Name ='know'  value= 'B' ><?php echo "Web"; ?>
+<P>
+<INPUT TYPE = 'Checkbox' Name ='know'  value= 'C' ><?php echo "Advertisement"; ?>
+
+<P>
+
+<P>
+<?php echo "4) Did you find what you were looking for on our site??"; ?>
+<P>
+<INPUT TYPE = 'Radio' Name ='q4'  value= 'A' ><?php echo "Yes, I found exactly what I was looking for";  ?>
+<P>
+<INPUT TYPE = 'Radio' Name ='q4'  value= 'B' ><?php echo "Yes, but not the Brand/Size/Color/Etc"; ?>
+<P>
+<INPUT TYPE = 'Radio' Name ='q4'  value= 'C' ><?php echo "I found a related product, but not what I wanted";  ?>
+<P>
+<INPUT TYPE = 'Radio' Name ='q4'  value= 'D' ><?php echo "No"; ?>
+
+<P>
+
+
+
+<P>
+<?php echo "5) Overall, how was your business experience with our online store?"; ?>
+<P>
+<INPUT TYPE = 'Radio' Name ='exp'  value= 'A' ><?php echo "Good"; ?>
+<P>
+<INPUT TYPE = 'Radio' Name ='exp'  value= 'B' ><?php echo "Average"; ?>
+<P>
+<INPUT TYPE = 'Radio' Name ='exp'  value= 'C' ><?php echo "Bad"; ?>
+
+<P>
+
+<P>
+<?php echo "6) Do you think you will shop at our online store again?"; ?>
+<P>
+<INPUT TYPE = 'Radio' Name ='q6'  value= 'A' ><?php echo "Yes"; ?>
+<P>
+<INPUT TYPE = 'Radio' Name ='q6'  value= 'B' ><?php echo "No"; ?>
+
+<P>
+
+<INPUT type=submit value="Submit Survey ">
+</FORM>
+</td>
+</tr>
+</table>
+
+<br/>
+<?php echo "We thank you for your valuable time spent on the survey"?>
+<br/>
+</font>
+</body>
+</html>

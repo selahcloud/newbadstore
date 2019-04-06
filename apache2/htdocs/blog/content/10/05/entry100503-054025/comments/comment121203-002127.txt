@@ -1,0 +1,1 @@
+VERSION|0.5.1|NAME|aa|DATE|1354494087|CONTENT|&lt;script&gt;alert(&quot;XSS&quot;)&lt;/script&gt;|IP-ADDRESS|10.11.18.16|MODERATIONFLAG|H

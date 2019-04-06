@@ -1,0 +1,32 @@
+NameVirtualHost *:80
+NameVirtualHost *:443
+
+<VirtualHost *:80>
+        ServerAdmin webmaster@localhost
+        DocumentRoot /usr/local/apache2/htdocs/
+</VirtualHost>
+
+<VirtualHost *:443>
+        SSLEngine on
+        SSLCertificateFile /etc/ssl/certs/cert.pem
+        ServerAdmin webmaster@localhost
+        DocumentRoot /usr/local/apache2/htdocs/
+</VirtualHost>
+
+<Directory /usr/local/apache2/htdocs/>
+        Options Indexes FollowSymLinks MultiViews +Includes
+        Order allow,deny
+        allow from all
+	AddType text/html .shtml
+	AddOutputFilter INCLUDES .shtml
+</Directory>
+
+ScriptAlias /cgi-bin/ /usr/local/apache2/cgi-bin/
+<Directory "/usr/local/apache2/cgi-bin">
+	AllowOverride None
+	Options +Includes
+	Order allow,deny
+	Allow from all
+	AddType text/html .shtml
+	AddOutputFilter INCLUDES .shtml
+</Directory>

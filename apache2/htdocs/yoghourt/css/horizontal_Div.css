@@ -1,0 +1,24 @@
+<style type="text/css">
+body {
+margin: 0px;
+padding: 0px;
+}
+#mylinks { 
+width: 100%; 
+}
+.link {
+margin-left: 50px;
+width: 400;
+height: 100;
+float: left;
+}
+#link1{
+background: url(../images/site1.jpg) no-repeat;
+}
+#link2{
+background: url(../images/site2.jpg) no-repeat;
+}
+#link3{
+background: url(../images/site3.jpg) no-repeat;
+}
+</style>

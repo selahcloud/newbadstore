@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>BlackSpring</title>
+<link rel="stylesheet" href="/BlackSpring/main.css" type="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+</head>
+<body>
+<div id="container">
+<!-- Header Start-->
+  <div id="header">
+    <!-- <div id="headtop"> <img src="sitemap.png" alt="Lorem ipsum" />&nbsp;<a href="#">Site Map</a> <img src="email.png" alt="Lorem ipsum" />&nbsp;<a href="#">Contact</a> <img src="info.png" alt="Lorem ipsum" />&nbsp;<a href="#">About</a> </div> -->
+    <div id="headbottom">
+      <h1>BadStore</h1>
+      <h2>The best deals on the Net.</h2>
+    </div>
+  </div>
+<!-- Header End and Menu Start-->  
+  <div id="menu">
+    <ul>
+      <li class="current"><a href="#">Home</a></li>
+      <li><a href="#">News</a></li>
+      <li><a href="#">Forum</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">Support</a></li>
+      <li><a href="#">Services</a></li>
+    </ul>
+    <div class="search">
+	<!--
+		<form method="post" action="#">
+          <input class="inputbutton" type="button" value="Search" />
+          <input class="inputtext" type="text" size="12" />
+		</form>	
+	-->
+
+      <form method="get" action="badstore.cgi">
+          <p>
+            <input type="hidden" name="action" value="search" />
+            <input type="text" id="searchquery" name="searchquery" size="10" value="Search" onfocus="(this.value!='Search'||(this.value=''));" onblur="this.value||(this.value='Search');" />
+            <input type="submit" value="Go" />
+          </p>
+        </form>
+
+
+  </div>
+
+	</div>
+<!-- Menu End and Content Start-->
+
+      <div class="padleft">
+          <iframe src="/cgi-bin/bsheader.cgi" height="25" width="500" border="0" align="middle" frameborder="0" noresize="noresize" style="border:0;margin-top:2px;background-color:red ! important; float:right; margin-right:100;"></iframe>        
+        </div>
+	<div class="navigation">
+        <a href="badstore.cgi?action=cartview">View Cart</a>
+	<!--#include filertual="../../cgi-bin/bsheader.shtml" -->
+	<!--#exec cgi="/cgi-bin/bsheader.cgi" -->
+	</div>
+
+  <div id="content">
+  <!-- Left content Start-->
+    <div id="leftcontent">
+    <!-- Navigation Start-->
+      <div class="navigation">
+        <div class="navhead">Customers</div>
+        <ul class="navmenu">
+
+          <li><a href="/cgi-bin/badstore.cgi" >Home</a></li>
+          <li><a href="/cgi-bin/badstore.cgi?action=whatsnew" >What's New</a></li>
+          <li><a href="/cgi-bin/badstore.cgi?action=guestbook">Guestbook</a></li>
+          <li><a href="/cgi-bin/badstore.cgi?action=viewprevious">Previous Orders</a></li>
+          <li><a href="/cgi-bin/badstore.cgi?action=aboutus">About Us</a></li>
+          <li><a href="/cgi-bin/badstore.cgi?action=myaccount">My Account</a></li>
+          <li><a href="/cgi-bin/badstore.cgi?action=loginregister">Login / Register</a></li>
+
+        </ul>
+      </div>
+
+ <div class="navigation">
+        <div class="navhead">Suppliers</div>
+        <ul class="navmenu">
+          <li><a href="https://www.badstore.net/cgi-bin/badstore.cgi?action=supplierlogin">Login</a></li>
+          <li><a href="/DoingBusiness/contract.doc">Download Contract</a></li>
+          <li><a href="badstore.cgi?action=supplierproc">Procedures</a></li>
+
+        </ul>
+      </div>
+
+
+
+      <!-- Navigation ends and Other navigation for login form-->
+      <div class="navigation">
+        <div class="navhead">News</div>
+        <p> <img src="/images/nextiphone4gblack1.jpg" alt="Lorem ipsum" width="140" height="150" /> Coming Soon: <b> iPhone 4G </b></p>
+      </div>
+      <!-- Navigation ends and Other navigation for some stuff-->
+    </div>
+    <!-- Left content ends and right content starts-->
+    <div id="rightcontent">
+

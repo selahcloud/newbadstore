@@ -1,0 +1,3 @@
+VERSION|0.5.1|SUBJECT|Welcome to the BadStore Blog!|CONTENT|In an effort to provide the best services to our customers, we are starting this blog which will provide the latest updates regarding our store and products. 
+
+So go ahead, subscribe to our blog and stay tunes for the latest exciting products and the best deals anywhere on the Net!|IP-ADDRESS|192.168.69.1|DATE|1272865225|CREATEDBY|admin

@@ -1,0 +1,165 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>:::Yoghourt::: A free template</title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="author" content="web-kreation.com" />
+  <meta name="keywords" content="Open Web Design, OWD, Free Web Template, Yoghourt, Web-Kreation" />
+  <meta name="description" content="A free web template designed by Web-Kreation.com and released under the Creative Common Attribution v2.5." />
+  <meta name="robots" content="index, follow, noarchive" />
+  <meta name="googlebot" content="noarchive" />
+
+  <!--The CSS-->
+  <link href="/yoghourt/css/stylesheet.css" rel="stylesheet" type="text/css" />
+  <link href="/yoghourt/css/horizontal_Div.css" rel="stylesheet" type="text/css" />
+
+  <link rel="shortcut icon" href="favicon.ico" />
+
+
+<style type="text/css">
+<!--
+#toolTipBox {
+	display: none;
+	padding: 5;
+	font-size: 12px;
+	border: black solid 1px;
+	font-family: verdana;
+	position: absolute;
+  background-color: #ffd038;
+  color: 000000;
+}
+-->
+</style>
+
+<script type="text/javascript">
+<!--
+/* This script and many more are available free online at
+The JavaScript Source!! http://javascript.internet.com
+Created by: Saul Salvatierra :: http://myarea.com.sapo.pt
+with help from Ultimater :: http://ultimiacian.tripod.com  */
+
+var theObj="";
+
+function toolTip(text,me) {
+  theObj=me;
+  theObj.onmousemove=updatePos;
+  document.getElementById('toolTipBox').innerHTML=text;
+  document.getElementById('toolTipBox').style.display="block";
+  window.onscroll=updatePos;
+}
+
+function updatePos() {
+  var ev=arguments[0]?arguments[0]:event;
+  var x=ev.clientX;
+  var y=ev.clientY;
+  diffX=24;
+  diffY=0;
+  document.getElementById('toolTipBox').style.top  = y-2+diffY+document.body.scrollTop+ "px";
+  document.getElementById('toolTipBox').style.left = x-2+diffX+document.body.scrollLeft+"px";
+  theObj.onmouseout=hideMe;
+}
+function hideMe() {
+  document.getElementById('toolTipBox').style.display="none";
+}
+-->
+</script>
+
+
+</head>
+
+
+<body>
+    <div id="container">
+        <div id="wrapper">
+            <div id="sidebar">
+                <div id="sb_top">
+                    <div class="sb_logo">
+                      <!-- The logo - Change it to be your own 
+                      <a href="index.html" title="Home"><img src="/yoghourt/images/logo.jpg" alt="Home" /></a> -->
+                      <a href="/index.html" title="Home"><img src="/yoghourt/images/store4.jpg" width="40%" alt="Home" /></a>
+                    </div>
+                    <!-- ... and now the slogan: -->
+                </div>
+
+                <div class="sb_content">
+
+                  <!--##########-->
+                  <!-- Start Menu -->
+              <h2>Customers</h2>
+                  <ul id="navlist">
+
+				<li><a href="/cgi-bin/badstore.cgi" >Home</a></li>
+				<li><a href="/cgi-bin/badstore.cgi?action=whatsnew" >What's New</a></li>
+				<li><a href="/cgi-bin/badstore.cgi?action=guestbook">Guestbook</a></li>
+				<li><a href="/cgi-bin/badstore.cgi?action=viewprevious">Previous Orders</a></li>
+				<li><a href="/cgi-bin/badstore.cgi?action=aboutus">About Us</a></li>
+				<li><a href="/cgi-bin/badstore.cgi?action=myaccount">My Account</a></li>
+				<li><a href="/cgi-bin/badstore.cgi?action=loginregister">Login / Register</a></li>
+
+
+  	  		  </ul> <!-- /Menu -->
+
+		<br> <br>
+              <h2>Suppliers</h2>
+             <ul id="navlist">
+
+		         <li><a href="https://www.badstore.net/cgi-bin/badstore.cgi?action=supplierlogin">Login</a></li>
+        		  <li><a href="/DoingBusiness/contract.doc">Download Contract</a></li>
+         		 <li><a href="badstore.cgi?action=supplierproc">Procedures</a></li>
+
+
+  	  		  </ul> <!-- /Menu -->
+
+		<br> <br>
+
+                  <!-- Discussions -->
+
+	            <ul id="navlist">
+
+                    	<!-- <li><a href="/forums/index.php" target="_blank">Discussions</a></li> -->
+                   	 <li><a href="/blog/index.php" target="_blank">Blog</a></li>
+                   	 <li><a href="/survey.php?user=customer" target="_blank">Customer Feedback</a></li>
+                   	 <li><a href="/survey.php?user=suppliers" target="_blank">Supplier Feedback</a></li>
+
+   		  </ul> <!-- /Menu -->
+
+		<br> <br>
+
+                  <!-- Profile -->
+                  <h2>Coming Soon</h2>
+                  <img src="/yoghourt/images/budha.jpg" alt="Photo Example" />
+
+
+                </div> <!-- /sb_content -->
+            </div> <!-- /sidebar -->
+
+
+            <!-- Top -->
+            <div id="header">
+		<form method="get" action="badstore.cgi">
+		   <input type="hidden" name="action" value="search" />
+                   <input id="searchquery" name="searchquery" class="search" type="text" value="Search" onfocus="(this.value!='Search'||(this.value=''));" onblur="this.value||(this.value='Search');" />
+		 </form>
+                   <a href="/yoghourt/contact.php" name="Contact"><img src="/yoghourt/images/contact.jpg"  alt="Contact" /> Contact</a>
+            </div>
+
+
+            <!-- Start main content -->
+            <div id="content">
+                <div id="introduction">
+                    <h1>BadStore</h1>
+
+	  <br> <br> <br>
+          <iframe src="/cgi-bin/bsheader.cgi" height="25" width="500" frameborder="0" noresize="noresize" style="border:1;margin-top:2px; float:left; "></iframe>
+
+        <a href="badstore.cgi?action=cartview">View Cart</a>
+        <!--#include filertual="../../cgi-bin/bsheader.shtml" -->
+        <!--#exec cgi="/cgi-bin/bsheader.cgi" -->
+
+
+                </div> <!-- /introduction -->
+
+
+
+                <div id=rightcontent>
+
