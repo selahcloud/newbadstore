@@ -5,6 +5,7 @@ Web applications have vulnerabilities that attackers can exploit. In order to pr
 ## Installation
 
 `docker pull selahcloud/newbadstore:latest`
+
 `docker run -it -p 80:80 <image id>`
 
 ## License
