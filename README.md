@@ -6,9 +6,9 @@ Web applications have vulnerabilities that attackers can exploit. In order to pr
 
 `docker pull selahcloud/newbadstore:latest`
 
-`docker ps -a` => locate the image id
+`docker ps -a` => locate the container id
 
-`docker run -it -p 80:80 <image id>`
+`docker run -it -p 80:80 <container id>`
 
 ## License
 GNU General Public License v3.0
