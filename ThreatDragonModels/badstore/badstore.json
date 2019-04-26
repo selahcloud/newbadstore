@@ -1,0 +1,18 @@
+{
+  "summary": {
+    "title": "badstore",
+    "owner": "aravindan",
+    "description": "badstore app-known vulnerable"
+  },
+  "detail": {
+    "contributors": [],
+    "diagrams": [
+      {
+        "title": "badstore",
+        "thumbnail": "./public/content/images/thumbnail.jpg",
+        "id": 0
+      }
+    ],
+    "reviewer": "aravindan"
+  }
+}
