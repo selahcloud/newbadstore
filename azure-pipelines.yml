@@ -103,7 +103,8 @@ stages:
                         kube_dict = json.loads(kubedeploy.read())
                         print(kube_dict)
                 except:
-                    print(f"{os.command('ls -l /etc/waf/')}")
+                    output= os.command("ls -l /etc/waf/")
+                    print(output)
 
                 with open("/etc/waf/waf.json", "r") as waf:
                     waf_dict = json.loads(waf.read())
