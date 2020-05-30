@@ -90,7 +90,7 @@ stages:
               scriptSource: 'inline'
               script: |
                 import json
-                with open("waf.json", "r") as waf:
+                with open("/home/vsts/work/1/waf.json", "r") as waf:
                     waf_dict = json.loads(waf)
                     print(waf_dict)
 
