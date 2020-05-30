@@ -98,7 +98,7 @@ stages:
                 import json
                 import os
                 try:
-                    os.command("/usr/bin/kubectl get service/selahcloudnewbadstore -o json --namespace default > /etc/waf/kubedeploy.json)
+                    os.command("/usr/bin/kubectl get service/selahcloudnewbadstore -o json --namespace default > /etc/waf/kubedeploy.json")
                     with open("/etc/waf/kubedeploy.json", "r") as kubedeploy:
                         kube_dict = json.loads(kubedeploy.read())
                         print(kube_dict)
