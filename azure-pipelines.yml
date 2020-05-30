@@ -84,13 +84,16 @@ stages:
             name: wafjson # The name with which to reference the secure file's path on the agent, like $(mySecureFile.secureFilePath)
             inputs:
               secureFile: waf.json # The file name or GUID of the secure file
+
           - task: PythonScript@0
             displayName: Protect with Barracuda WAF
             inputs:
               scriptSource: 'inline'
               script: |
                 import json
-                with open("/home/vsts/work/1/wafjson", "r") as waf:
+                import os
+                wafjson=os.environ[wafjson.secureFilePath]
+                with open("wafjson", "r") as waf:
                     waf_dict = json.loads(waf)
                     print(waf_dict)
 
