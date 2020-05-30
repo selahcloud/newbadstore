@@ -76,4 +76,10 @@ stages:
                 $(imagePullSecret)
               containers: |
                 $(containerRegistry)/$(imageRepository):$(tag)
+          - task: PythonScript@0
+            displayName: Protect with Barracuda WAF
+            inputs:
+              scriptSource: 'inline'
+              script: 'print("build is successful")'
 
+  
