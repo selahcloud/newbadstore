@@ -88,6 +88,10 @@ stages:
             displayName: Protect with Barracuda WAF
             inputs:
               scriptSource: 'inline'
-              script: 'print("build is successful")'
+              script: |
+                import json
+                with open("waf.json", "r") as waf:
+                    waf_dict = json.loads(waf)
+                    print(waf_dict)
 
   
