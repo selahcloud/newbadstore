@@ -84,17 +84,12 @@ stages:
             name: wafjson # The name with which to reference the secure file's path on the agent, like $(mySecureFile.secureFilePath)
             inputs:
               secureFile: waf.json # The file name or GUID of the secure file
-
-          - task: PythonScript@0
-            displayName: Protect with Barracuda WAF
-            inputs:
-              scriptSource: 'inline'
-              script: |
-                import json
-                import os
-                wafjson=os.environ[wafjson.secureFilePath]
-                with open("wafjson", "r") as waf:
-                    waf_dict = json.loads(waf)
-                    print(waf_dict)
+          - script: |
+              sudo chown root:root $(wafjson.secureFilePath)
+              sudo chmod a+r $(wafjson.secureFilePath)
+              sudo mkdir -p /etc/waf
+              sudo ln -s -t /etc/waf/ $(wafjson.secureFilePath)
+              sudo ls -l /etc/waf/
+          
 
   
