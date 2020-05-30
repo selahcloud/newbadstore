@@ -98,7 +98,7 @@ stages:
                 import json
                 import os
                 with open("/etc/waf/waf.json", "r") as waf:
-                    waf_dict = json.loads(waf)
+                    waf_dict = json.loads(waf.read())
                     print(waf_dict)
           
 
