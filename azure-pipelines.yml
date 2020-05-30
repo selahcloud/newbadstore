@@ -76,6 +76,14 @@ stages:
                 $(imagePullSecret)
               containers: |
                 $(containerRegistry)/$(imageRepository):$(tag)
+          - task: DownloadSecureFile@1
+            name: kubeconfig # The name with which to reference the secure file's path on the agent, like $(mySecureFile.secureFilePath)
+            inputs:
+              secureFile: config # The file name or GUID of the secure file
+          - task: DownloadSecureFile@1
+            name: wafjson # The name with which to reference the secure file's path on the agent, like $(mySecureFile.secureFilePath)
+            inputs:
+              secureFile: waf.json # The file name or GUID of the secure file
           - task: PythonScript@0
             displayName: Protect with Barracuda WAF
             inputs:
