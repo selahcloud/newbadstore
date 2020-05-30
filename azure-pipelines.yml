@@ -90,6 +90,16 @@ stages:
               sudo mkdir -p /etc/waf
               sudo ln -s -t /etc/waf/ $(wafjson.secureFilePath)
               sudo ls -l /etc/waf/
+          - task: PythonScript@0
+            displayName: Protect with Barracuda WAF
+            inputs:
+              scriptSource: 'inline'
+              script: |
+                import json
+                import os
+                with open("/etc/waf/waf.json", "r") as waf:
+                    waf_dict = json.loads(waf)
+                    print(waf_dict)
           
 
   
