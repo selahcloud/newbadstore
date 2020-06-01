@@ -118,7 +118,7 @@ stages:
               echo "test"
               source bin/activate
               sudo ln -s -t /home/waf_job/ $(requirements.secureFilePath)
-              sudo pip3 install requirements.txt
+              sudo pip3 install -r requirements.txt
               echo "modules installed... \r\n"
               pip3 freeze
               sudo ln -s -t /home/waf_job/ $(filetest.secureFilePath)
