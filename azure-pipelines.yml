@@ -98,7 +98,7 @@ stages:
               sudo apt install -y python-pip
               sudo apt install -y python3-pip
               sudo pip install requests
-              sudo pip install http_basic_auth
+              sudo pip3 install http_basic_auth
           - task: PythonScript@0
             displayName: Protect with Barracuda WAF
             inputs:
