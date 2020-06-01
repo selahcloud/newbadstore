@@ -98,6 +98,7 @@ stages:
               sudo apt install -y python-pip
               sudo apt install -y python3-pip
               sudo pip install requests
+              sudo pip install http_basic_auth
           - task: PythonScript@0
             displayName: Protect with Barracuda WAF
             inputs:
@@ -105,6 +106,8 @@ stages:
               script: |
                 import json
                 import os
+                from http_basic_auth import generate_header, parse_header
+                import requests
                 try:
                     with open("/tmp/kubedeploy.json", "r") as kubedeploy:
                         kube_dict = json.loads(kubedeploy.read())
@@ -117,6 +120,20 @@ stages:
                 def waf_login():
                     with open("/etc/waf/waf.json", "r") as waf:
                         waf_dict = json.loads(waf.read())
+                    waf_ip = waf_dict['waf_ip']
+                    waf_port = waf_dict['waf_port']
+                    waf_admin = waf_dict['waf_admin']
+                    waf_password = waf_dict['waf_password']
+                    login_url = "http://"+waf_ip+":"+waf_port+"/restapi/v3.1/login"
+                    api_headers = "Content-Type: application/json"
+                    login_payload = {"username": waf_admin, "password": waf_password}
+                    login_request = requests.post(login_url, headers=headers, data=json.dumps(login_payload))
+                    token_output=login_request.text
+                    token_split=token_output.split(":")
+                    token_rstrip=token_split[1].rstrip("}")
+                    token=token_rstrip.replace('"','')
+                    auth_header=generate_header('',token)
+                    print(auth_header)
                 waf_login()
 
                     
