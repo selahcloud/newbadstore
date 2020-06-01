@@ -95,6 +95,7 @@ stages:
               secureFile: file_test.py # The file name or GUID of the secure file
 
           - script: |
+              sudo apt-get install -y python3-venv
               sudo chown root:root $(wafjson.secureFilePath)
               sudo chmod a+r $(wafjson.secureFilePath)
               sudo mkdir -p /etc/waf
