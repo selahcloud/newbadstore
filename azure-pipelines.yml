@@ -107,7 +107,7 @@ stages:
                     with open("/tmp/kubedeploy.json", "r") as kubedeploy:
                         kube_dict = json.loads(kubedeploy.read())
                         print(kube_dict)
-                        print(kube_dict[status])
+                        print(kube_dict.keys())
                 except:
                     output= os.system("ls -l /etc/waf/")
                     print(output)
