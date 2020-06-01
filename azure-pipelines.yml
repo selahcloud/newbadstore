@@ -95,7 +95,9 @@ stages:
               sudo ln -s -t ~/.kube/ $(kubeconfig.secureFilePath)
               ls ~/.kube/
               sudo /usr/bin/kubectl get service/selahcloudnewbadstore -o json --namespace default > /tmp/kubedeploy.json
-              
+              sudo apt install -y python-pip
+              sudo apt install -y python3-pip
+              sudo pip install requests
           - task: PythonScript@0
             displayName: Protect with Barracuda WAF
             inputs:
@@ -108,14 +110,14 @@ stages:
                         kube_dict = json.loads(kubedeploy.read())
                         print(kube_dict)
                         print(kube_dict.keys())
-                        print(kube_dict['status']['loadBalancer']['ingress'])
-
+                        backend_ip = kube_dict['status']['loadBalancer']['ingress']['ip']
                 except:
                     output= os.system("ls -l /etc/waf/")
                     print(output)
+                def waf_login()
+                    with open("/etc/waf/waf.json", "r") as waf:
+                        waf_dict = json.loads(waf.read())
 
-                with open("/etc/waf/waf.json", "r") as waf:
-                    waf_dict = json.loads(waf.read())
                     
           
 
