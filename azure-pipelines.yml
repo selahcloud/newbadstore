@@ -114,6 +114,8 @@ stages:
               cd /home/
               sudo python3 -m venv waf_job
               cd waf_job
+              pwd
+              echo "test"
               source bin/activate
               sudo ln -s -t /home/waf_job/ $(requirements.secureFilePath)
               sudo pip3 install requirements.txt
