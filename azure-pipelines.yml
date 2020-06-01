@@ -114,9 +114,10 @@ stages:
                 except:
                     output= os.system("ls -l /etc/waf/")
                     print(output)
-                def waf_login()
+                def waf_login():
                     with open("/etc/waf/waf.json", "r") as waf:
                         waf_dict = json.loads(waf.read())
+                waf_login()
 
                     
           
