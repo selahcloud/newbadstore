@@ -119,8 +119,10 @@ stages:
               source bin/activate
               sudo ln -s -t /home/waf_job/ $(requirements.secureFilePath)
               sudo pip3 install requirements.txt
+              echo "modules installed... \r\n"
+              pip3 freeze
               sudo ln -s -t /home/waf_job/ $(filetest.secureFilePath)
-              sudo python3 file_test.py
+              #sudo python3 file_test.py
 
 
                     
