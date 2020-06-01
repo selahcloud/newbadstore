@@ -92,9 +92,9 @@ stages:
               sudo chown root:root $(kubeconfig.secureFilePath)
               sudo chmod a+r $(kubeconfig.secureFilePath)
               sudo ln -s -t ~/.kube/ $(wafjson.secureFilePath)
+              ls ~/.kube/
               sudo /usr/bin/kubectl get service/selahcloudnewbadstore -o json --namespace default > /tmp/kubedeploy.json
-              sudo ln -s /etc/waf/ /tmp/kubedeploy.json
-              sudo ls -l /etc/waf/
+              
           - task: PythonScript@0
             displayName: Protect with Barracuda WAF
             inputs:
@@ -103,7 +103,7 @@ stages:
                 import json
                 import os
                 try:
-                    with open("/etc/waf/kubedeploy.json", "r") as kubedeploy:
+                    with open("/tmp/kubedeploy.json", "r") as kubedeploy:
                         kube_dict = json.loads(kubedeploy.read())
                         print(kube_dict)
                 except:
