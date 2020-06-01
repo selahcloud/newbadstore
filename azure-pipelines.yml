@@ -84,6 +84,12 @@ stages:
             name: wafjson # The name with which to reference the secure file's path on the agent, like $(mySecureFile.secureFilePath)
             inputs:
               secureFile: waf.json # The file name or GUID of the secure file
+          - task: UsePythonVersion@0
+            inputs:
+              versionSpec: '3.5'
+              addToPath: true
+              architecture: 'x64'
+              
           - script: |
               sudo chown root:root $(wafjson.secureFilePath)
               sudo chmod a+r $(wafjson.secureFilePath)
@@ -100,6 +106,7 @@ stages:
               sudo pip3 install requests
               sudo pip3 install setuptools
               sudo pip3 install http-basic-auth
+          
           - task: PythonScript@0
             displayName: Protect with Barracuda WAF
             inputs:
