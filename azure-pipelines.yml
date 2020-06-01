@@ -113,7 +113,7 @@ stages:
 
                 with open("/etc/waf/waf.json", "r") as waf:
                     waf_dict = json.loads(waf.read())
-                    print(waf_dict)
+                    print(waf_dict[status][loadBalancer][ingress][ip])
           
 
   
