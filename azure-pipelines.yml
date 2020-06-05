@@ -11,16 +11,20 @@ resources:
 variables:
 
   # Container registry service connection established during pipeline creation
-  dockerRegistryServiceConnection: 'd731729b-d72a-4f55-b2a6-e2db10ab848e'
+  dockerRegistryServiceConnection: 'aksregistry'
   imageRepository: 'selahcloudnewbadstore'
-  containerRegistry: 'privregistry01.azurecr.io'
+  containerRegistry: 'cicdaksregistry.azurecr.io'
   dockerfilePath: '**/Dockerfile'
   tag: '$(Build.BuildId)'
-  imagePullSecret: 'privregistry011817b2cb-auth'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
-  
+
+- task: ContainerBuild@0
+  inputs:
+    dockerRegistryServiceConnection: 'aksregistry'
+    repository: 'selahcloudnewbadstore'
+    Dockerfile: 'Dockerfile'
 
 stages:
 - stage: Build
