@@ -103,36 +103,36 @@ stages:
                 $(imagePullSecret)
               containers: |
                 $(containerRegistry)/$(imageRepository):$(tag)
-  - deployment: Protect
+- stage: Protect
+  displayName: Protect
+  jobs:  
+  - job: Protect
     displayName: Protect
-    jobs:  
-    - job: Protect
-      displayName: Protect
-      pool:
-        vmImage: $(vmImageName)
-      steps:
-        - task: DownloadSecureFile@1
-          name: kubeconfig # The name with which to reference the secure file's path on the agent, like $(mySecureFile.secureFilePath)
-          inputs:
-            secureFile: config # The file name or GUID of the secure file
+    pool:
+      vmImage: $(vmImageName)
+    steps:
+    - task: DownloadSecureFile@1
+      name: kubeconfig # The name with which to reference the secure file's path on the agent, like $(mySecureFile.secureFilePath)
+      inputs:
+        secureFile: config # The file name or GUID of the secure file
 
-        - task: DownloadSecureFile@1
-          name: wafjson # The name with which to reference the secure file's path on the agent, like $(mySecureFile.secureFilePath)
-          inputs:
-            secureFile: waf.json # The file name or GUID of the secure file
-        - task: DownloadSecureFile@1
-          name: requirements # The name with which to reference the secure file's path on the agent, like $(mySecureFile.secureFilePath)
-          inputs:
-            secureFile: requirements.txt # The file name or GUID of the secure file
+    - task: DownloadSecureFile@1
+      name: wafjson # The name with which to reference the secure file's path on the agent, like $(mySecureFile.secureFilePath)
+      inputs:
+        secureFile: waf.json # The file name or GUID of the secure file
+    - task: DownloadSecureFile@1
+      name: requirements # The name with which to reference the secure file's path on the agent, like $(mySecureFile.secureFilePath)
+      inputs:
+        secureFile: requirements.txt # The file name or GUID of the secure file
 
-        - task: DownloadSecureFile@1
-          name: filetest # The name with which to reference the secure file's path on the agent, like $(mySecureFile.secureFilePath)
-          inputs:
-            secureFile: file_test.py # The file name or GUID of the secure file
-        - task: Bash@3
-          inputs:
-            targetType: 'inline'
-            script: |
+    - task: DownloadSecureFile@1
+      name: filetest # The name with which to reference the secure file's path on the agent, like $(mySecureFile.secureFilePath)
+      inputs:
+        secureFile: file_test.py # The file name or GUID of the secure file
+    - task: Bash@3
+      inputs:
+        targetType: 'inline'
+          script: |
               #! /bin/bash
               sudo apt-get install -y python3-venv
               sudo apt-get install python3-setuptools
