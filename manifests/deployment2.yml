@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: selahcloudnewbadstorestaging
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: selahcloudnewbadstorestaging
+    spec:
+      containers:
+        - name: selahcloudnewbadstorestaging
+          image: cudakuberegistry.azurecr.io/selahcloudnewbadstore
+          ports:
+          - containerPort: 80
