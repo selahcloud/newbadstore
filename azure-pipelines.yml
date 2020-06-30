@@ -103,6 +103,10 @@ stages:
                 $(imagePullSecret)
               containers: |
                 $(containerRegistry)/$(imageRepository):$(tag)
+  - deployment: Protect
+    displayName: Protect
+    pool:
+      vmImage: $(vmImageName)        
           - task: DownloadSecureFile@1
             name: kubeconfig # The name with which to reference the secure file's path on the agent, like $(mySecureFile.secureFilePath)
             inputs:
