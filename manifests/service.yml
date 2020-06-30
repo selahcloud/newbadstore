@@ -8,3 +8,14 @@ spec:
     - port: 80 
     selector:
         app: selahcloudnewbadstore
+---
+apiVersion: v1
+kind: Service
+metadata:
+    name: selahcloudnewbadstorestaging
+spec:
+    type: LoadBalancer
+    ports:
+    - port: 8888
+    selector:
+        app: selahcloudnewbadstorestaging
