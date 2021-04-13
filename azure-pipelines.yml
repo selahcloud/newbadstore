@@ -76,4 +76,7 @@ stages:
                 $(imagePullSecret)
               containers: |
                 $(containerRegistry)/$(imageRepository):$(tag)
-
+          - task: TerraformInstaller@0
+            inputs:
+              terraformVersion: 'latest'
+              
