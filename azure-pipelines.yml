@@ -80,3 +80,20 @@ stages:
             inputs:
               terraformVersion: 'latest'
               
+          - task: DownloadSecureFile@1
+            name: kubeconfig # The name with which to reference the secure file's path on the agent, like $(mySecureFile.secureFilePath)
+            inputs:
+              secureFile: config # The file name or GUID of the secure file
+          - task: DownloadSecureFile@2
+            name: wafjson # The name with which to reference the secure file's path on the agent, like $(mySecureFile.secureFilePath)
+            inputs:
+              secureFile: waf.json # The file name or GUID of the secure file
+          - task: DownloadSecureFile@3
+            name: requirements # The name with which to reference the secure file's path on the agent, like $(mySecureFile.secureFilePath)
+            inputs:
+              secureFile: requirements.txt # The file name or GUID of the secure file
+
+          - task: DownloadSecureFile@4
+            name: filetest # The name with which to reference the secure file's path on the agent, like $(mySecureFile.secureFilePath)
+            inputs:
+              secureFile: file_test.py # The file name or GUID of the secure file
