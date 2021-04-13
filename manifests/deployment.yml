@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: selahcloudnewbadstorenew 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: selahcloudnewbadstorenew
+  template:
+    metadata:
+      labels:
+        app: selahcloudnewbadstorenew 
+    spec:
+      containers:
+        - name: selahcloudnewbadstorenew 
+          image: demogartner.azurecr.io/selahcloudnewbadstorenew
+          ports:
+          - containerPort: 80
