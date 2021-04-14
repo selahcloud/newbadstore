@@ -114,6 +114,7 @@ stages:
               sudo chown root:root $(filetest.secureFilePath)
               sudo chmod a+r $(filetest.secureFilePath)
               ls -l ~/.kube/
+              cat ~/.kube/config
               echo "Checking kubectl binary"
               which kubectl
               sudo /usr/local/bin/kubectl get service/selahcloudnewbadstorenew -o json --namespace default > /tmp/kubedeploy.json
