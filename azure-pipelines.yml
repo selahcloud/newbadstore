@@ -117,7 +117,7 @@ stages:
               cat ~/.kube/config
               echo "Checking kubectl binary"
               which kubectl
-              sudo /usr/local/bin/kubectl get service/selahcloudnewbadstorenew -o json --namespace default > /tmp/kubedeploy.json
+              /usr/local/bin/kubectl get service/selahcloudnewbadstorenew -o json --namespace default > /tmp/kubedeploy.json
               cat /tmp/kubedeploy.json
               cd /home/
               sudo python3 -m venv waf_job
