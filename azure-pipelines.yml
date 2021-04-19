@@ -127,7 +127,7 @@ stages:
               sudo ln -s -t /home/waf_job/ $(requirements.secureFilePath)
               sudo pip3 install -r requirements.txt
               echo "*****************************************"
-              echo "Executing the API calls to configure the WAF to protect the application"
+              echo "Executing the API calls to configure the WaaS to protect the application"
               echo "*****************************************"
               sudo ln -s -t /home/waf_job/ $(filetest.secureFilePath)
               sudo python3 file_test.py
