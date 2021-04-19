@@ -76,9 +76,6 @@ stages:
                 $(imagePullSecret)
               containers: |
                 $(containerRegistry)/$(imageRepository):$(tag)
-          - task: TerraformInstaller@0
-            inputs:
-              terraformVersion: 'latest'
               
           - task: DownloadSecureFile@1
             name: kubeconfig # The name with which to reference the secure file's path on the agent, like $(mySecureFile.secureFilePath)
